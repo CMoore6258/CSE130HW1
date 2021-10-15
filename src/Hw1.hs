@@ -31,10 +31,7 @@ import Prelude  hiding (replicate, sum, reverse)
 sumList :: [Int] -> Int
 sumList [] = 0
 sumList (x:xs) = x + sumList xs
-<<<<<<< HEAD
-=======
 
->>>>>>> fa1ed3a8126bb39fae0c54048302680a4f80c07d
 
 
 -- | `digitsOfInt n` should return `[]` if `n` is not positive,
@@ -48,12 +45,8 @@ sumList (x:xs) = x + sumList xs
 -- [3, 5, 2, 6, 6, 3]
 
 digitsOfInt :: Int -> [Int]
-<<<<<<< HEAD
 digitsOfInt n = if n <= 0 then [] else digitsOfInt z ++ [n `mod` 10]
     where z = n `div` 10
-=======
-digitsOfInt n = if n <= 0 then (n div 10) ++ [n mod 10]
->>>>>>> fa1ed3a8126bb39fae0c54048302680a4f80c07d
 
 
 -- | `digits n` retruns the list of digits of `n`
