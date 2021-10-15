@@ -29,7 +29,9 @@ import Prelude  hiding (replicate, sum, reverse)
 -- 36
 
 sumList :: [Int] -> Int
-sumList xs = error "TBD:sumList"
+sumList [] = 0
+sumList (x:xs) = x + sumList xs
+
 
 
 -- | `digitsOfInt n` should return `[]` if `n` is not positive,
@@ -43,7 +45,7 @@ sumList xs = error "TBD:sumList"
 -- [3, 5, 2, 6, 6, 3]
 
 digitsOfInt :: Int -> [Int]
-digitsOfInt n = error "TBD:digitsOfInt"
+digitsOfInt n = if n <= 0 then (n div 10) ++ [n mod 10]
 
 
 -- | `digits n` retruns the list of digits of `n`
@@ -99,7 +101,7 @@ digitalRoot n = error "TBD"
 -- ["bicycle", "my", "ride", "to", "want", "i"]
 
 listReverse :: [a] -> [a]
-listReverse xs = error "TBD"
+listReverse (x:xs) = listReverse xs ++ [x] 
 
 -- | In Haskell, a `String` is a simply a list of `Char`, that is:
 --
