@@ -116,4 +116,7 @@ listReverse (x:xs) = listReverse xs ++ [x]
 -- False
 
 palindrome :: String -> Bool
-palindrome w = error "TBD"
+palindrome w = let r = listReverse w
+		in r == w
+
+--Compare against its own reverse, true if same, false otherwise
