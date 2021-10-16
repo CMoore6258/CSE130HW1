@@ -79,7 +79,7 @@ digits n = digitsOfInt (abs n)
 -- 2
 
 additivePersistence :: Int -> Int
-additivePersistence n = error "TBD"
+additivePersistence n = if (length (digitsOfInt n)) == 1 then 0 else 1 + (additivePersistence (sumList (digitsOfInt n)))
 
 -- | digitalRoot n is the digit obtained at the end of the sequence
 --   computing the additivePersistence
