@@ -102,6 +102,7 @@ digitalRoot n = error "TBD"
 -- ["bicycle", "my", "ride", "to", "want", "i"]
 
 listReverse :: [a] -> [a]
+listReverse [] = []
 listReverse (x:xs) = listReverse xs ++ [x] 
 
 -- | In Haskell, a `String` is a simply a list of `Char`, that is:
@@ -117,6 +118,6 @@ listReverse (x:xs) = listReverse xs ++ [x]
 
 palindrome :: String -> Bool
 palindrome w = let r = listReverse w
-		in r == w
+               in r == w
 
 --Compare against its own reverse, true if same, false otherwise
